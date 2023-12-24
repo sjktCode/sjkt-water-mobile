@@ -6,7 +6,8 @@ import { Toast } from "antd-mobile";
 import { AUTH_TOKEN } from "./constants";
 
 const httpLink = createHttpLink({
-  uri: "https://morally-settling-tiger.ngrok-free.app/graphql",
+  uri: "https://sjkt-water-server.vercel.app/graphql",
+  // uri: "https://morally-settling-tiger.ngrok-free.app/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
