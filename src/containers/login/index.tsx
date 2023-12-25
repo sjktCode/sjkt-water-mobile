@@ -1,5 +1,4 @@
 import { useState } from "react";
-import md5 from "md5";
 import { Button, Form, Input, Space } from "antd-mobile";
 import { EyeInvisibleOutline, EyeOutline } from "antd-mobile-icons";
 import { useMutation } from "@apollo/client";
@@ -30,7 +29,7 @@ const Login = () => {
   const loginHandler = async (values: IValue) => {
     const res = await login({
       variables: {
-        password: md5(values.password),
+        password: values.password,
         account: values.account,
       },
     });
